@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Dumb Spider Made of requests and bs4 | Invent some wheels.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="BackgroundOne day when I was browsing webpages as usual [Data Deleted] and finally I found this, a complete collection of my favourite albums.  Of course I considerd a batch download immediately. To m">
+  <meta name="description" content="BackgroundOne day when I was browsing webpages as usual [Data Deleted] and finally I found this, a complete collection of my favourite albums.">
 <meta name="keywords" content="Spider,Practice">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Dumb Spider Made of requests and bs4">
 <meta property="og:url" content="http://yoursite.com/2019/09/28/Dumb-Spider-Made-of-requests-and-bs4/index.html">
 <meta property="og:site_name" content="Invent some wheels.">
-<meta property="og:description" content="BackgroundOne day when I was browsing webpages as usual [Data Deleted] and finally I found this, a complete collection of my favourite albums.  Of course I considerd a batch download immediately. To m">
+<meta property="og:description" content="BackgroundOne day when I was browsing webpages as usual [Data Deleted] and finally I found this, a complete collection of my favourite albums.">
 <meta property="og:locale" content="zh">
 <meta property="og:image" content="http://yoursite.com/2019/09/28/Dumb-Spider-Made-of-requests-and-bs4/my-favourite-album-downloading-page.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/28/Dumb-Spider-Made-of-requests-and-bs4/unable-to-register.png">
@@ -22,10 +22,10 @@
 <meta property="og:image" content="http://yoursite.com/2019/09/28/Dumb-Spider-Made-of-requests-and-bs4/playlist-src.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/28/Dumb-Spider-Made-of-requests-and-bs4/one-of-the-downloading-pages.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/28/Dumb-Spider-Made-of-requests-and-bs4/dl-pages-src.png">
-<meta property="og:updated_time" content="2019-09-28T04:22:40.775Z">
+<meta property="og:updated_time" content="2019-09-28T23:54:02.450Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dumb Spider Made of requests and bs4">
-<meta name="twitter:description" content="BackgroundOne day when I was browsing webpages as usual [Data Deleted] and finally I found this, a complete collection of my favourite albums.  Of course I considerd a batch download immediately. To m">
+<meta name="twitter:description" content="BackgroundOne day when I was browsing webpages as usual [Data Deleted] and finally I found this, a complete collection of my favourite albums.">
 <meta name="twitter:image" content="http://yoursite.com/2019/09/28/Dumb-Spider-Made-of-requests-and-bs4/my-favourite-album-downloading-page.png">
   
     <link rel="alternative" href="/atom.xml" title="Invent some wheels." type="application/atom+xml">
@@ -175,6 +175,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>One day when I was browsing webpages as usual [Data Deleted] and finally I found <a href="https://downloads.khinsider.com/game-soundtracks/album/metal-slug-complete-sound-box" target="_blank" rel="noopener">this</a>, a complete collection of my favourite albums.</p>
+<a id="more"></a>
 <p><img src="/2019/09/28/Dumb-Spider-Made-of-requests-and-bs4/my-favourite-album-downloading-page.png" alt="My favourite albums"></p>
 <p>Of course I considerd a batch download immediately. To my great dismay, I found the service requires membership, which is disabled due to <del>GFW</del> network issues, I guess.</p>
 <p><img src="/2019/09/28/Dumb-Spider-Made-of-requests-and-bs4/unable-to-register.png" alt="Unable to register"><br>I also tried IDM, however, it snatched the whole site and nearly cause my disk to explode.<br>That&#x2019;s when I come up with the idea of using Spider.</p>
@@ -193,7 +194,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">soup = soup.find(id=<span class="string">&apos;songlist&apos;</span>)</span><br><span class="line">targets = soup.find_all(<span class="string">&apos;tr&apos;</span>)</span><br></pre></td></tr></table></figure>
 
 <h3 id="Loop-and-save"><a href="#Loop-and-save" class="headerlink" title="Loop and save"></a>Loop and save</h3><p>Even if we get all the urls, they are useless until they are put down somewhere. Therefore, an output file is needed for the task. Upon creating the file, we get into the loop, find the url, paste them on the output file, and download them.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">outputFile = open(<span class="string">&quot;logopt.txt&quot;</span>, <span class="string">&quot;w&quot;</span>, encoding=<span class="string">&apos;utf-8&apos;</span>)</span><br><span class="line">urldomain = <span class="string">&apos;downloads.khinsider.com&apos;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> targets:</span><br><span class="line">    i = i.find(<span class="string">&apos;a&apos;</span>)</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        outputFile.write(<span class="string">&quot;%s%s\n&quot;</span> % (urldomain, i[<span class="string">&apos;href&apos;</span>]))</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">outputFile.close()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">outputFile = open(<span class="string">&quot;logopt.txt&quot;</span>, <span class="string">&quot;w&quot;</span>, encoding=<span class="string">&apos;utf-8&apos;</span>)</span><br><span class="line">urldomain = <span class="string">&apos;https://downloads.khinsider.com&apos;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> targets:</span><br><span class="line">    i = i.find(<span class="string">&apos;a&apos;</span>)</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        outputFile.write(<span class="string">&quot;%s%s\n&quot;</span> % (urldomain, i[<span class="string">&apos;href&apos;</span>]))</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">outputFile.close()</span><br></pre></td></tr></table></figure>
 
 <p>Minutes passed before I realised how serious a mistake I&#x2019;ve made. <strong>The urls link to new pages instead of flac files!!!</strong></p>
 <h3 id="Fix-my-mistakes"><a href="#Fix-my-mistakes" class="headerlink" title="Fix my mistakes"></a>Fix my mistakes</h3><p>As long as the downloading pages are of the same format, it won&#x2019;t be hard to find the real urls I wanted.</p>
@@ -298,6 +299,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/09/29/Dumb-Spider-Advanced/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Dumb Spider Advanced
+        
+      </div>
+    </a>
   
   
     <a href="/2019/09/19/Java-for-a-Start/" id="article-nav-older" class="article-nav-link-wrap">
@@ -448,19 +458,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Spider Practice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Basic</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Spider</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Practice</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Basic</a>
               </li>
             
             <div class="clearfix"></div>
