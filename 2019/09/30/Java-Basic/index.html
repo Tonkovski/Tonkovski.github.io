@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Dumb Spider Advanced | Invent some wheels.</title>
+  <title>Java Basic | Invent some wheels.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Back to workAfter yesterday&amp;#x2019;s incident, I tried to get the program fixed as soon as possible.">
-<meta name="keywords" content="Spider,Practice">
+  <meta name="description" content="After some &amp;#x201C;first things first&amp;#x201C;s, it is time I got my brain red-hot.">
+<meta name="keywords" content="Basic">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Dumb Spider Advanced">
-<meta property="og:url" content="http://yoursite.com/2019/09/29/Dumb-Spider-Advanced/index.html">
+<meta property="og:title" content="Java Basic">
+<meta property="og:url" content="http://yoursite.com/2019/09/30/Java-Basic/index.html">
 <meta property="og:site_name" content="Invent some wheels.">
-<meta property="og:description" content="Back to workAfter yesterday&amp;#x2019;s incident, I tried to get the program fixed as soon as possible.">
+<meta property="og:description" content="After some &amp;#x201C;first things first&amp;#x201C;s, it is time I got my brain red-hot.">
 <meta property="og:locale" content="zh">
-<meta property="og:image" content="http://yoursite.com/2019/09/29/Dumb-Spider-Advanced/unfunctional-program.png">
-<meta property="og:updated_time" content="2019-09-29T05:48:13.545Z">
+<meta property="og:updated_time" content="2019-10-01T04:52:41.341Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dumb Spider Advanced">
-<meta name="twitter:description" content="Back to workAfter yesterday&amp;#x2019;s incident, I tried to get the program fixed as soon as possible.">
-<meta name="twitter:image" content="http://yoursite.com/2019/09/29/Dumb-Spider-Advanced/unfunctional-program.png">
+<meta name="twitter:title" content="Java Basic">
+<meta name="twitter:description" content="After some &amp;#x201C;first things first&amp;#x201C;s, it is time I got my brain red-hot.">
   
     <link rel="alternative" href="/atom.xml" title="Invent some wheels." type="application/atom+xml">
   
@@ -149,39 +147,65 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Dumb-Spider-Advanced" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java-Basic" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Dumb Spider Advanced
+      Java Basic
     </h1>
   
 
         
-        <a href="/2019/09/29/Dumb-Spider-Advanced/" class="archive-article-date">
-  	<time datetime="2019-09-28T23:52:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-29</time>
+        <a href="/2019/09/30/Java-Basic/" class="archive-article-date">
+  	<time datetime="2019-09-30T02:30:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Back-to-work"><a href="#Back-to-work" class="headerlink" title="Back to work"></a>Back to work</h2><p>After <a href="https://tonkovski.github.io/2019/09/28/Dumb-Spider-Made-of-requests-and-bs4/" target="_blank" rel="noopener">yesterday&#x2019;s incident</a>, I tried to get the program fixed as soon as possible.</p>
+        <p>After some &#x201C;<a href="https://tonkovski.github.io/2019/09/19/Java-for-a-Start/" target="_blank" rel="noopener">first things first</a>&#x201C;s, it is time I got my brain red-hot.</p>
 <a id="more"></a>
-<h2 id="The-original-frame"><a href="#The-original-frame" class="headerlink" title="The original frame"></a>The original frame</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment">#-*-coding:utf-8-*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">f = open(<span class="string">&apos;logopt.txt&apos;</span>, <span class="string">&apos;r&apos;</span>)</span><br><span class="line">urlopt = open(<span class="string">&apos;urlopt.txt&apos;</span>, <span class="string">&apos;w&apos;</span>)            <span class="comment"># &quot;urlopt.txt&quot; is the output file generated by the previous program.</span></span><br><span class="line">line = f.readline()</span><br><span class="line"><span class="keyword">while</span> line:</span><br><span class="line">    html = requests.request(<span class="string">&quot;GET&quot;</span>, line)</span><br><span class="line">    soup = BeautifulSoup(html.text, features=<span class="string">&quot;html.parser&quot;</span>)</span><br><span class="line">    soup = soup.find(id=<span class="string">&apos;EchoTopic&apos;</span>)</span><br><span class="line">    soup = soup.find_all(<span class="string">&apos;a&apos;</span>)</span><br><span class="line">    print(soup)                             <span class="comment">#output test</span></span><br><span class="line">    line = f.readline()</span><br><span class="line">urlopt.close()</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
 
-<p>As it turned out, even though this script is adapted from the previous one, it still doesn&#x2019;t work.</p>
-<p><img src="/2019/09/29/Dumb-Spider-Advanced/unfunctional-program.png" alt="Unfunctional program"></p>
-<h2 id="Dumb-debug"><a href="#Dumb-debug" class="headerlink" title="Dumb debug"></a>Dumb debug</h2><p>At last I made the conclusion that the problem arouse from the &#x201C;\n&#x201D; in the end of every line. That is to say&#x2026;</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment">#-*-coding:utf-8-*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">f = open(<span class="string">&apos;logopt.txt&apos;</span>, <span class="string">&apos;r&apos;</span>)</span><br><span class="line">urlopt = open(<span class="string">&apos;urlopt.txt&apos;</span>, <span class="string">&apos;w&apos;</span>)</span><br><span class="line">line = f.readline()</span><br><span class="line"><span class="keyword">while</span> line:</span><br><span class="line">    html = requests.request(<span class="string">&quot;GET&quot;</span>, line[<span class="number">0</span>:<span class="number">-1</span>])      <span class="comment"># Change here</span></span><br><span class="line">    soup = BeautifulSoup(html.text, features=<span class="string">&quot;html.parser&quot;</span>)</span><br><span class="line">    soup = soup.find(id=<span class="string">&apos;EchoTopic&apos;</span>)</span><br><span class="line">    soup = soup.find_all(<span class="string">&apos;a&apos;</span>)</span><br><span class="line">    print(soup)</span><br><span class="line">    line = f.readline()</span><br><span class="line">urlopt.close()</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
-
-<p>That makes sense.</p>
-<h2 id="Take-my-revenge"><a href="#Take-my-revenge" class="headerlink" title="Take my revenge"></a>Take my revenge</h2><p>There are still endless problems, while I find the location of my target, the messing beautifulsoup doesn&#x2019;t. That forced me to locate the target using prev_sibling attributes. If you got some good ideas, please don&#x2019;t be stingy.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment">#-*-coding:utf-8-*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">f = open(<span class="string">&apos;logopt.txt&apos;</span>, <span class="string">&apos;r&apos;</span>)</span><br><span class="line">urlopt = open(<span class="string">&apos;urlopt.txt&apos;</span>, <span class="string">&apos;w&apos;</span>)    <span class="comment"># &quot;urlopt.txt&quot; is the output file generated by the previous program.</span></span><br><span class="line">line = f.readline()</span><br><span class="line"><span class="keyword">while</span> line:</span><br><span class="line">    html = requests.request(<span class="string">&quot;GET&quot;</span>, line[<span class="number">0</span>: <span class="number">-1</span>])</span><br><span class="line">    soup = BeautifulSoup(html.text, features=<span class="string">&quot;html.parser&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># What a mess!!!</span></span><br><span class="line">    soup = soup.find(<span class="string">&apos;audio&apos;</span>).previous_sibling.previous_sibling.previous_sibling.previous_sibling.previous_sibling.previous_sibling.previous_sibling.previous_sibling</span><br><span class="line"></span><br><span class="line">    soup = soup.find(<span class="string">&apos;a&apos;</span>)[<span class="string">&apos;href&apos;</span>]</span><br><span class="line">    print(soup)</span><br><span class="line">    urlopt.write(<span class="string">&quot;%s\n&quot;</span> % soup)</span><br><span class="line">    line = f.readline()</span><br><span class="line">urlopt.close()</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
-
+<h2 id="Some-basic-grammar"><a href="#Some-basic-grammar" class="headerlink" title="Some basic grammar"></a>Some basic grammar</h2><p>Several technical terms have been confusing me for months since I first set my feet on the field of object-oriented programming, so it is of great significant for me to put them and their meaning down to remind myself.</p>
+<ul>
+<li>class<ul>
+<li>Being a template, a class defines objects&#x2019; behaviour and status.</li>
+</ul>
+</li>
+<li>object<ul>
+<li>Being a living case of a class, an object has behaviour and status.</li>
+</ul>
+</li>
+<li>method<ul>
+<li>Method <strong>is</strong> behaviour. A class can have many methods, including logic computing, data processing, etc.</li>
+</ul>
+</li>
+<li>instance variable (Ivars)<ul>
+<li>Each object has its own ivars, which determines object&#x2019;s different statuses.</li>
+</ul>
+</li>
+</ul>
+<p>I find a great example on the Internet to explain the mess above:</p>
+<blockquote>
+<p>Provided that I have a dog named <del>Donald J. Trump</del> John, three-year-old, male, sterilized.</p>
+<ul>
+<li>The creature is an &#x201C;object&#x201D;.</li>
+<li>Class &#x201C;dog&#x201D; can be used to describe this creature. The description includes statuses such as name and gender type, and behaviours(methods) such as barking and wagging.</li>
+<li>&#x201C;John&#x201D;, &#x201C;three-year-old&#x201D;, &#x201C;male&#x201D;, &#x201C;sterilized&#x201D; determain the object&#x2019;s statuses.</li>
+</ul>
+</blockquote>
+<h2 id="To-dos"><a href="#To-dos" class="headerlink" title="To-dos"></a>To-dos</h2><p>Even though every textbook would not underline the knowledge below, I&#x2019;d like to put them down as a reminder for myself in the future:</p>
+<ul>
+<li>Java is <strong>case-sensitive</strong>.</li>
+<li>Class name should be started with upper-cased letters. for instance, <em>MyFirstJavaClass</em>.</li>
+<li>Method name should be started otherwise like <em>myFirstJavaMethod</em></li>
+<li>Src-file name should be the same with class name (&#x201C;<em>MyFirstJavaClass.java</em>&#x201C;).</li>
+<li>Main method entry must be <strong>public static void main(String args[])</strong>.</li>
+</ul>
 
       
 
@@ -195,11 +219,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spider</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Practice</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Basic</a>
         		</li>
       		
 		</ul>
@@ -211,7 +231,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Python//" class="article-tag-list-link color2">Python</a>
+        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -266,7 +286,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/29/Dumb-Spider-Advanced/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/30/Java-Basic/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -280,18 +300,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/30/Java-Basic/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Java Basic
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/28/Dumb-Spider-Made-of-requests-and-bs4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Dumb Spider Made of requests and bs4</div>
+    <a href="/2019/09/29/Dumb-Spider-Advanced/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Dumb Spider Advanced</div>
       <i class="icon-circle-right"></i>
     </a>
   
