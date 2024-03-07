@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="General Hack: Zombie G*****p Survival (com.f****games.zgs)" />
+    <meta name="hexo-theme-A4" content="v1.8.8" />
+    <link rel="alternate icon" type="image/webp" href="/assets/img/favicon.jpeg">
+    <title>Just a Scratch... | Evan&#39;s Scratch Note</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.1.1"></head>
+    
+    
+    <body>
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/assets/img/favicon.jpeg" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Just a Scratch...</a> 
+            <span class="description">With nowhere to hide, I finally find this place...</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">Entry</a></li>
+            
+        
+            
+                <li><a href="/pinboard/">Pinboard</a></li>
+            
+        
+            
+                <li><a href="/list/">Articles</a></li>
+            
+        
+            
+                <li><a href="/tags/">Tags</a></li>
+            
+        
+            
+                <li><a href="/categories/">Categories</a></li>
+            
+        
+            
+                <li><a href="/about/">About</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            General Hack: Zombie G*****p Survival (com.f****games.zgs)
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#To-Begin-With%E2%80%A6"><span class="post-toc-text">To Begin With…</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#App-Info"><span class="post-toc-text">App Info</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Goals"><span class="post-toc-text">Goals</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Static-Analyze"><span class="post-toc-text">Static Analyze</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Gunship-related"><span class="post-toc-text">Gunship-related</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Battle-GunshipLogic-CanFireWeapon"><span class="post-toc-text">Battle::GunshipLogic::CanFireWeapon</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Battle-GunshipLogic-FireProjectile"><span class="post-toc-text">Battle::GunshipLogic::FireProjectile</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Squad-related"><span class="post-toc-text">Squad-related</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Battle-SquadLogic-CalculateSquadSpeed"><span class="post-toc-text">Battle::SquadLogic::CalculateSquadSpeed</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Battle-ZombieLogic-DamageForZombie"><span class="post-toc-text">Battle::ZombieLogic::DamageForZombie</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#The-Script"><span class="post-toc-text">The Script</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#To-end-with%E2%80%A6"><span class="post-toc-text">To end with…</span></a></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h2 id="To-Begin-With…"><a href="#To-Begin-With…" class="headerlink" title="To Begin With…"></a>To Begin With…</h2><p>I’m no professional guys when it comes to reverse, but seeing thoughts squandered by elapsing times can be frustrating. So this is why I am writing this After Action Review (<strong>AAF</strong>).</p>
+<h2 id="App-Info"><a href="#App-Info" class="headerlink" title="App Info"></a>App Info</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">app_name:</span> <span class="string">Zombie</span> <span class="string">G*****p</span> <span class="string">Survival</span></span><br><span class="line"><span class="attr">packet_name:</span> <span class="string">com.f****games.zgs</span></span><br><span class="line"><span class="attr">app_version:</span> <span class="number">1.6</span><span class="number">.93</span> <span class="string">(1006093)</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="/2024/02/24/General-Hack-Zombie-G-p-Survival-com-f-games-zgs/preview.png" title="Game Preview" class="gallery-item" style="box-shadow: none;"> <img src="/2024/02/24/General-Hack-Zombie-G-p-Survival-com-f-games-zgs/preview.png" alt="Game Preview"></a></p>
+<p>Yeah, this is that kind of boring games, which you aim an AC130 at zombie hordes and protect your ground infantry. And yeah the game have in-app purchases. The Gatling guns are always overheating, the cannons &amp; rockets are always running out of ammo, <strong>unless you pay them well</strong>. Some more intel on this app have been gathered in advance:</p>
+<ul>
+<li><strong>Internet connection required</strong>: This game cannot be played offline by any means, and the payments are audited server-side. Goodbye LuckyPatcher. And besides editing coins </li>
+<li><strong>Minor anticheat features</strong>: There once exists a way to edit in-game loot type, which can grant player numerous gold in minutes. However, doing this in great numbers can trigger a ban from accessing and taking place in leaderboard events.<ul>
+<li>The game has a leaderboard which is reset at the beginning of every in-game event, the leaderboard determines how much loot every involver can receive, so developers was like “<em>Hey, why don’t I set up some mouse traps to catch some clowns</em>“. And yes, I was one of the clowns. </li>
+<li><em>Assumption</em>: The in-game loot edit cheat has been annihilated simply by changing auditing logic to server side. Clients only send messages like “mission 1-1 completed, give me my loot.”, any edit on client-side values will be discarded.</li>
+</ul>
+</li>
+<li><strong>Dynamic .so files loading</strong>: The app loads .so files directly from APK, and nothing useful can be find in <code>/data/app/xxxxxx-0/lib/...</code> . On the other Hand, repacking the APK can possibly cause a ban. Meaning editing the memory region where the game runs is the only way.</li>
+<li><strong>Local computing</strong>: Even the developers put every effort into anticheating, they <em>can’t fret over every egg</em>. The mission logic is computed locally. Which gives us chance to…</li>
+</ul>
+<h2 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h2><p>Make a GameGuardian script, which get things done like:</p>
+<ul>
+<li>Remove things like overheat and ammo-depletion.</li>
+<li>Make the ground infantry more strong and move faster.</li>
+</ul>
+<h2 id="Static-Analyze"><a href="#Static-Analyze" class="headerlink" title="Static Analyze"></a>Static Analyze</h2><p>Time for some old-fashioned IDA…</p>
+<p><a href="/2024/02/24/General-Hack-Zombie-G-p-Survival-com-f-games-zgs/emoji.png" title="Oh man, what girlfriend can satisfy you when you have THIS!" class="gallery-item" style="box-shadow: none;"> <img src="/2024/02/24/General-Hack-Zombie-G-p-Survival-com-f-games-zgs/emoji.png" alt="Oh man, what girlfriend can satisfy you when you have THIS!"></a></p>
+<p>Just a joke, now we are talking about finding the target, which is  <code>./lib/arm64-v8a/libzgijni.so</code>. The <code>armeabi-v7a</code> variant has similar logic, which will not be duplicated.</p>
+<p>After a quick view of <em>Exports</em> the potential target functions can be found as follows:</p>
+<ul>
+<li>Battle::GunshipLogic::CanFireWeapon - 0x94BFD8</li>
+<li>Battle::GunshipLogic::FireProjectile - 0x94C364</li>
+<li>Battle::SquadLogic::CalculateSquadSpeed - 0x877AEC</li>
+<li>Battle::ZombieLogic::DamageForZombie - 0x88D858</li>
+</ul>
+<p>To achieve the goals these functions are separated into two groups, namely gunship-related and squad-related.</p>
+<h3 id="Gunship-related"><a href="#Gunship-related" class="headerlink" title="Gunship-related"></a>Gunship-related</h3><p>As is revealed by their function names, the two functions coming first can be useful for gunship hacks. To remove things like overheat and ammo-depletion, the most easy and brutal way is to make the game always think “Oh that big gun can fire”.</p>
+<h4 id="Battle-GunshipLogic-CanFireWeapon"><a href="#Battle-GunshipLogic-CanFireWeapon" class="headerlink" title="Battle::GunshipLogic::CanFireWeapon"></a>Battle::GunshipLogic::CanFireWeapon</h4><p>This function is the final gate of whether the guns are ready to fire. It sums up the overheat status, reloading status, magazine status, etc., while it only returns boolean values. As is said before I’m no professionals, so all I can do is make it always end with <strong>True</strong>.</p>
+<p>So I am going to short-circuit the function into this form:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MOV W0, #1</span><br><span class="line">RET </span><br></pre></td></tr></table></figure>
+
+<p>Which is <code>20 00 80 52 C0 03 5F D6</code>.</p>
+<h4 id="Battle-GunshipLogic-FireProjectile"><a href="#Battle-GunshipLogic-FireProjectile" class="headerlink" title="Battle::GunshipLogic::FireProjectile"></a>Battle::GunshipLogic::FireProjectile</h4><p>So why paying attention to this one? Well, it turns out that simply removing the fire limit will make overheat weapon’s spread accumulate dramatically, which ruins experience of Gatling guns. These weapons must be get rid of weapon spread, or at least, have their spread fixed at a certain value.</p>
+<p>The pseudocode of this function reveals something that can be useful:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">  v17 = *((<span class="type">float</span> *)a3 + <span class="number">132</span>);</span><br><span class="line">  <span class="keyword">if</span> ( *((_BYTE *)a3 + <span class="number">608</span>) )</span><br><span class="line">    v17 = v17 * (<span class="type">float</span>)((<span class="type">float</span>)(*((<span class="type">float</span> *)a2 + <span class="number">60</span>) * *((<span class="type">float</span> *)a3 + <span class="number">176</span>)) + <span class="number">1.0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Assumptions</strong>:</p>
+<ul>
+<li><code>a3</code> points to the current weapon object , which means…<ul>
+<li><code>*((_BYTE *)a3 + 608)</code> can possibly mean “whether this thing overheats”</li>
+</ul>
+</li>
+<li><code>v17</code> calculates the final weapon spread.</li>
+</ul>
+<p>The path is clear. Short-circuit the <em>if</em> to get things done.</p>
+<p>This is how the <em>if</em> works, with the value of <code>v17</code> storing in <code>S9</code>:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LDRB            W8, [X19,#0x260]</span><br><span class="line">LDR             S9, [X19,#0x210]</span><br><span class="line">CBZ             W8, loc_94C474</span><br></pre></td></tr></table></figure>
+
+<p>Minor changes can be made:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LDRB            W8, [X19,#0x260]</span><br><span class="line">FMOV            S9, #1</span><br><span class="line">B               #0x1c       // loc_94C474</span><br></pre></td></tr></table></figure>
+
+<p>Which is <code>09 10 2E 1E 07 00 00 14</code>.</p>
+<h3 id="Squad-related"><a href="#Squad-related" class="headerlink" title="Squad-related"></a>Squad-related</h3><p>Of course one of the goals is to make squads fast and strong. Looking closer at the latter two functions grants more info:</p>
+<h4 id="Battle-SquadLogic-CalculateSquadSpeed"><a href="#Battle-SquadLogic-CalculateSquadSpeed" class="headerlink" title="Battle::SquadLogic::CalculateSquadSpeed"></a>Battle::SquadLogic::CalculateSquadSpeed</h4><p>Yeah this one returns the squad speed in float form. Make it short:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FMOV S0, #5</span><br><span class="line">RET</span><br></pre></td></tr></table></figure>
+
+<p>Which is <code>00 90 22 1E C0 03 5F D6</code>.</p>
+<p>Actually tried several times on this one to figure out what the value means. Turns out to be “the bigger, the faster”.</p>
+<h4 id="Battle-ZombieLogic-DamageForZombie"><a href="#Battle-ZombieLogic-DamageForZombie" class="headerlink" title="Battle::ZombieLogic::DamageForZombie"></a>Battle::ZombieLogic::DamageForZombie</h4><p>Another boring float-returning function. Make it short:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FMOV S0, #1</span><br><span class="line">RET </span><br></pre></td></tr></table></figure>
+
+<p>Hesitated on whether to zero this value, no, zombie bite hurts, no matter how little it is.</p>
+<p>Finally it is time a script was written.</p>
+<h2 id="The-Script"><a href="#The-Script" class="headerlink" title="The Script"></a>The Script</h2><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">scriptInfo</span><span class="params">()</span></span></span><br><span class="line">    gg.alert(</span><br><span class="line"><span class="string">[[</span></span><br><span class="line"><span class="string">GameGuardian script for &quot;Zombie Gunship Survival&quot;.</span></span><br><span class="line"><span class="string">Version: 1.6.93(1006093)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Created by t0nkov.</span></span><br><span class="line"><span class="string">FOR LEARNING PURPOSES ONLY, ILLEGAL USAGE PROHIBITED!</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">!!! Warning !!!</span></span><br><span class="line"><span class="string">- This patch is intended for arm64-v8a devices only.</span></span><br><span class="line"><span class="string">- Only confirmed working in the version mentioned above.</span></span><br><span class="line"><span class="string">- Only tested after tutorial.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Script functions:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- Can Fire Any Time:</span></span><br><span class="line"><span class="string">  - Can fire gunship weapon any time.</span></span><br><span class="line"><span class="string">  - Infinite gunship weapon ammo.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- Super Squad &amp; Weak Zombie:</span></span><br><span class="line"><span class="string">  - Squads go brrrrrrr~~~~</span></span><br><span class="line"><span class="string">  - Squads &amp; buildings are invulnerable to zombie attacks.</span></span><br><span class="line"><span class="string">]]</span></span><br><span class="line">    )</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Main</span><span class="params">()</span></span></span><br><span class="line">    <span class="keyword">local</span> MN = gg.choice(&#123;</span><br><span class="line">        <span class="string">&quot;&gt; Can Fire Any Time&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&gt; Super Squad &amp; Weak Zombie&quot;</span>,</span><br><span class="line">        <span class="string">&quot;Exit Script&quot;</span></span><br><span class="line">        &#125;, <span class="literal">nil</span>, <span class="string">&quot;Script by t0nkov&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> MN == <span class="number">1</span> <span class="keyword">then</span> canFireAnyTime() <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">if</span> MN == <span class="number">2</span> <span class="keyword">then</span> superHuman() <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">if</span> MN == <span class="number">3</span> <span class="keyword">then</span> exitScript() <span class="keyword">end</span></span><br><span class="line">    gg_window_status = <span class="number">-1</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">canFireAnyTime</span><span class="params">()</span></span></span><br><span class="line">    gg.clearResults()</span><br><span class="line">    gg.setRanges(gg.REGION_CODE_APP)</span><br><span class="line">    </span><br><span class="line">    gg.searchNumber(<span class="string">&#x27;h F7 0F 1C F8 F6 57 01 A9 F4 4F 02 A9 FD 7B 03 A9 FD C3 00 91 08 00 40 F9 F4 03 00 AA F3 03 01 2A 16 01 40 F9 C0 A2 01 91 78 B1 EC 97 40 01 00 B4 08 00 40 F9 81 1F 87 52 01 2E A1 72 F5 03 00 AA&#x27;</span>, gg.TYPE_BYTE, <span class="literal">false</span>, gg.SIGN_EQUAL)</span><br><span class="line">    <span class="keyword">local</span> results = gg.getResults(<span class="number">65</span>)</span><br><span class="line">    <span class="keyword">if</span> #results == <span class="number">64</span> <span class="keyword">then</span></span><br><span class="line">        gg.editAll(<span class="string">&quot;h 20 00 80 52 C0 03 5F D6 F4 4F 02 A9 FD 7B 03 A9 FD C3 00 91 08 00 40 F9 F4 03 00 AA F3 03 01 2A 16 01 40 F9 C0 A2 01 91 78 B1 EC 97 40 01 00 B4 08 00 40 F9 81 1F 87 52 01 2E A1 72 F5 03 00 AA&quot;</span>, gg.TYPE_BYTE)</span><br><span class="line">        gg.clearResults()</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        errorExitScript()</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="comment">--[[</span></span><br><span class="line"><span class="comment">Battle::GunshipLogic::CanFireWeapon</span></span><br><span class="line"><span class="comment">MOV W0, #1</span></span><br><span class="line"><span class="comment">RET  </span></span><br><span class="line"><span class="comment">20 00 80 52 C0 03 5F D6</span></span><br><span class="line"><span class="comment">--]]</span></span><br><span class="line"></span><br><span class="line">    gg.searchNumber(<span class="string">&#x27;h 68 82 49 39 69 12 42 BD E8 00 00 34 80 F2 40 BD 61 C2 42 BD 00 08 21 1E 01 10 2E 1E 00 28 21 1E 29 09 20 1E 77 43 01 91 E8 02 40 F9 08 65 40 F9 E0 03 17 AA 00 01 3F D6 E8 02 40 F9 08 1C A0 4E 08 65 40 F9 E0 03 17 AA 00 01 3F D6 28 06 00 B0 01 41 4A BD 00 28 20 1E E0 73 00 91 E1 63 00 91 00 08 21 1E 28 09 28 1E 0E C9 EC 97 E0 07 43 2D 00 09 20 1E 01 09 21 1E E0 C3 00 91 E2 03 27 1E&#x27;</span>, gg.TYPE_BYTE, <span class="literal">false</span>, gg.SIGN_EQUAL)</span><br><span class="line">    <span class="keyword">local</span> results = gg.getResults(<span class="number">129</span>)</span><br><span class="line">    <span class="keyword">if</span> #results == <span class="number">128</span> <span class="keyword">then</span></span><br><span class="line">        gg.editAll(<span class="string">&quot;h 68 82 49 39 09 10 2E 1E 07 00 00 14 80 F2 40 BD 61 C2 42 BD 00 08 21 1E 01 10 2E 1E 00 28 21 1E 29 09 20 1E 77 43 01 91 E8 02 40 F9 08 65 40 F9 E0 03 17 AA 00 01 3F D6 E8 02 40 F9 08 1C A0 4E 08 65 40 F9 E0 03 17 AA 00 01 3F D6 28 06 00 B0 01 41 4A BD 00 28 20 1E E0 73 00 91 E1 63 00 91 00 08 21 1E 28 09 28 1E 0E C9 EC 97 E0 07 43 2D 00 09 20 1E 01 09 21 1E E0 C3 00 91 E2 03 27 1E&quot;</span>, gg.TYPE_BYTE)</span><br><span class="line">        gg.clearResults()</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        errorExitScript()</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="comment">--[[</span></span><br><span class="line"><span class="comment">Battle::GunshipLogic::FireProjectile</span></span><br><span class="line"><span class="comment">//Autocannon spread logic</span></span><br><span class="line"><span class="comment">else</span></span><br><span class="line"><span class="comment">  &#123;</span></span><br><span class="line"><span class="comment">    v17 = *((float *)a3 + 132);</span></span><br><span class="line"><span class="comment">    if ( *((_BYTE *)a3 + 608) )</span></span><br><span class="line"><span class="comment">      v17 = v17 * (float)((float)(*((float *)a2 + 60) * *((float *)a3 + 176)) + 1.0);</span></span><br><span class="line"><span class="comment">  &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">LDR             S9, [X19,#0x210]</span></span><br><span class="line"><span class="comment">CBZ             W8, loc_94D3B8</span></span><br><span class="line"><span class="comment">69 12 42 BD E8 00 00 34</span></span><br><span class="line"><span class="comment">↓</span></span><br><span class="line"><span class="comment">FMOV S9, #1</span></span><br><span class="line"><span class="comment">B #0x1c</span></span><br><span class="line"><span class="comment">09 10 2E 1E 07 00 00 14</span></span><br><span class="line"><span class="comment">--]]</span></span><br><span class="line"></span><br><span class="line">    gg.toast(<span class="string">&quot;Activated: &gt; Can Fire Any Time&quot;</span>)</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">superHuman</span><span class="params">()</span></span></span><br><span class="line">    gg.clearResults()</span><br><span class="line">    gg.setRanges(gg.REGION_CODE_APP)</span><br><span class="line"></span><br><span class="line">    gg.searchNumber(<span class="string">&#x27;h FF 43 01 D1 E9 23 01 6D F5 13 00 F9 F4 4F 03 A9 FD 7B 04 A9 FD 03 01 91 55 D0 3B D5 A8 16 40 F9 14 00 80 12 E1 13 00 91 F3 03 00 AA E8 07 00 F9 F4 07 00 B9 24 FB EF 97 68 02 40 F9 09 01 40 F9&#x27;</span>, gg.TYPE_BYTE, <span class="literal">false</span>, gg.SIGN_EQUAL)</span><br><span class="line">    <span class="keyword">local</span> results = gg.getResults(<span class="number">65</span>)</span><br><span class="line">    <span class="keyword">if</span> #results == <span class="number">64</span> <span class="keyword">then</span></span><br><span class="line">        gg.editAll(<span class="string">&quot;h 00 90 22 1E C0 03 5F D6 F5 13 00 F9 F4 4F 03 A9 FD 7B 04 A9 FD 03 01 91 55 D0 3B D5 A8 16 40 F9 14 00 80 12 E1 13 00 91 F3 03 00 AA E8 07 00 F9 F4 07 00 B9 24 FB EF 97 68 02 40 F9 09 01 40 F9&quot;</span>, gg.TYPE_BYTE)</span><br><span class="line">        gg.clearResults()</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        errorExitScript()</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="comment">--[[</span></span><br><span class="line"><span class="comment">Battle::SquadLogic::CalculateSquadSpeed</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">FMOV S0, #5</span></span><br><span class="line"><span class="comment">RET</span></span><br><span class="line"><span class="comment">00 90 22 1E C0 03 5F D6</span></span><br><span class="line"><span class="comment">--]]</span></span><br><span class="line"></span><br><span class="line">    gg.searchNumber(<span class="string">&#x27;h E9 23 BC 6D F5 0B 00 F9 F4 4F 02 A9 FD 7B 03 A9 FD C3 00 91 7F 00 00 72 08 2E 80 52 E9 07 19 32 28 11 88 9A 48 68 68 BC F4 03 00 AA 81 03 00 B4 28 90 41 F9 29 94 41 F9 F3 03 01 AA E9 03 27 1E&#x27;</span>, gg.TYPE_BYTE, <span class="literal">false</span>, gg.SIGN_EQUAL)</span><br><span class="line">    <span class="keyword">local</span> results = gg.getResults(<span class="number">65</span>)</span><br><span class="line">    <span class="keyword">if</span> #results == <span class="number">64</span> <span class="keyword">then</span></span><br><span class="line">        gg.editAll(<span class="string">&quot;h 00 10 2E 1E C0 03 5F D6 F4 4F 02 A9 FD 7B 03 A9 FD C3 00 91 7F 00 00 72 08 2E 80 52 E9 07 19 32 28 11 88 9A 48 68 68 BC F4 03 00 AA 81 03 00 B4 28 90 41 F9 29 94 41 F9 F3 03 01 AA E9 03 27 1E&quot;</span>, gg.TYPE_BYTE)</span><br><span class="line">        gg.clearResults()</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        errorExitScript()</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">    gg.toast(<span class="string">&quot;Activated: &gt; Super Squad &amp; Weak Zombie&quot;</span>)</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">--[[</span></span><br><span class="line"><span class="comment">Battle::ZombieLogic::DamageForZombie</span></span><br><span class="line"><span class="comment">FMOV S0, #1</span></span><br><span class="line"><span class="comment">RET </span></span><br><span class="line"><span class="comment">00 10 2E 1E C0 03 5F D6</span></span><br><span class="line"><span class="comment">--]]</span></span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">exitScript</span><span class="params">()</span></span></span><br><span class="line">    gg.toast(<span class="string">&quot;Script shutting down...&quot;</span>)</span><br><span class="line">    <span class="built_in">os</span>.<span class="built_in">exit</span>()</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">errorExitScript</span><span class="params">()</span></span></span><br><span class="line">    gg.toast(<span class="string">&quot;AoB template matching zero or dupilcated occurrences.\nThe script is either run twice or out-of-date!\nExiting script...&quot;</span>)</span><br><span class="line">    <span class="built_in">os</span>.<span class="built_in">exit</span>()</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">scriptInfo()</span><br><span class="line"><span class="keyword">while</span> <span class="literal">true</span> <span class="keyword">do</span></span><br><span class="line">    <span class="keyword">if</span> gg.isVisible(<span class="literal">true</span>) <span class="keyword">then</span></span><br><span class="line">        gg_window_status = <span class="number">1</span></span><br><span class="line">        gg.setVisible(<span class="literal">false</span>)</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">    gg.clearResults()</span><br><span class="line">    <span class="keyword">if</span> gg_window_status == <span class="number">1</span> <span class="keyword">then</span></span><br><span class="line">    Main()</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="To-end-with…"><a href="#To-end-with…" class="headerlink" title="To end with…"></a>To end with…</h2><p>“Go mind your own business” they said, “Stop wasting time on such useless things” they said. In the past twenty years, my family members seldom made any mistakes, and I can hardly believe that this time they are wrong. </p>
+<p>But I still remembered that line, which reads: <em>Life is not a rat race.</em> I first encountered that one on <em>Solaris</em>‘s GitHub page. Solaris, a “labmate” of mine, always being thoughtful and full of inner-power, can always carry on regardless.</p>
+<p>I don’t want a rate race either.</p>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-02-24</span>
+            
+                <span>该篇文章被 Evan Tonkovski</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/Android/'>
+                            Android
+                        </a>
+                    
+                        <a href='/tags/Reverse/'>
+                            Reverse
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/Hobby/'>
+                            Hobby
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 2024 Evan Tonkovski 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>Ads here... Wait, I don&#39;t even have a sponsor :-(</span>
+            
+    
+</div>
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+
+
+    <!--暗黑模式-->
+    <script src="/js/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+        const options = {
+            bottom: '53px', // default: '32px'
+            right: 'unset', // default: '32px'
+            left: '42px', // default: 'unset'
+            time: '0.3s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+            buttonColorDark: '#100f2c',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: true, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+    
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+        
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+  
+</html>
